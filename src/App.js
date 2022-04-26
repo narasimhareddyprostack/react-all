@@ -9,6 +9,7 @@ import ContactApp from "./components/ContactList/ContactApp";
 import AllRedux from "./components/Redux/AllRedux";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import Search from './components/Search/Search'
 import Reader from "./components/PDFReader/Reader";
 import Register from './components/Hooks/Register'
 import MessageOne from './components/Hooks/MessageReducer/MessageOne'
@@ -31,9 +32,10 @@ class App extends Component {
               <Route exact path="/contact" component={ContactApp} />
               <Route exact path="/redux" component={AllRedux} />
               <Route exact path="/content" component={Reader} />
-              <Route exact path="/thunk"  component={UserList}></Route> 
-              <Route exact path="/registration"  component={Registration}></Route>         
-                </Switch>
+              <Route exact path="/search" component={Search} />
+              <Route exact path="/thunk" component={UserList}></Route>
+              <Route exact path="/registration" component={Registration}></Route>
+            </Switch>
           </Router>
         </Provider>
       </>

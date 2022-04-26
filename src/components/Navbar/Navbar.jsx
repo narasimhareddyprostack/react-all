@@ -15,7 +15,7 @@ class Navbar extends React.Component {
                   Component
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link to="/props" className="nav-link">
                   Props
                 </Link>
@@ -29,7 +29,7 @@ class Navbar extends React.Component {
                 <Link to="/state" className="nav-link">
                   Event Binding
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link to="/forms" className="nav-link">
                   Form Handling
@@ -62,7 +62,7 @@ class Navbar extends React.Component {
               </li>
               <li className="nav-item">
                 <Link to="/ref" className="nav-link">
-                  React - useRef Hooks
+                  useRef Hooks
                 </Link>
               </li>
               <li className="nav-item">
@@ -70,15 +70,20 @@ class Navbar extends React.Component {
                   useReducer
                 </Link>
               </li>
-            
+
               <li className="nav-item">
                 <Link to="/registration" className="nav-link">
-                  Form Handling - Ex
+                  Form Handling
                 </Link>
               </li>
-               <li className="nav-item">
+              <li className="nav-item">
                 <Link to="/thunk" className="nav-link">
                   React Thunk
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/search" className="nav-link">
+                  Search
                 </Link>
               </li>
             </ul>

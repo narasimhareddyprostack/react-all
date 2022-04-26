@@ -3,7 +3,7 @@ import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { Worker } from "@react-pdf-viewer/core"; // install this library
-import pdffile from "../../assets/react-course-content.pdf";
+import pdffile from "../../assets/sbi.pdf";
 import React, { useState } from "react";
 function Reader() {
   const defaultLayoutPluginInstance = defaultLayoutPlugin();

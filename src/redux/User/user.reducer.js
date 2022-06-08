@@ -17,7 +17,6 @@ let userReducer = (state = initialState, action) => {
         case FETCH_CUST_SUCCESS:
             console.log("Test Case section")
             return {
-
                 users: payload,
                 loading: false
             }

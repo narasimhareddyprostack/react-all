@@ -10,6 +10,7 @@ import AllRedux from "./components/Redux/AllRedux";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import Search from './components/Search/Search'
+import EApp from './components/ET/EApp'
 import Reader from "./components/PDFReader/Reader";
 import Register from './components/Hooks/Register'
 import MessageOne from './components/Hooks/MessageReducer/MessageOne'
@@ -35,6 +36,7 @@ class App extends Component {
               <Route exact path="/search" component={Search} />
               <Route exact path="/thunk" component={UserList}></Route>
               <Route exact path="/registration" component={Registration}></Route>
+              <Route exact path="/et" component={EApp}></Route>
             </Switch>
           </Router>
         </Provider>

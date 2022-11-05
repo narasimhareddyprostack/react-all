@@ -10,6 +10,7 @@ class DigitalWatch extends React.Component {
 
   // when the component is fully loaded
   componentDidMount() {
+    console.log("Birth")
     this.timer = setInterval(() => {
       this.setState({
         currentTime: new Date().toLocaleTimeString(),
@@ -19,6 +20,7 @@ class DigitalWatch extends React.Component {
 
   // this will execute,  when the component is removed from the DOM
   componentWillUnmount() {
+    console.log("Death..Try Again")
     clearInterval(this.timer); // clearing the timer
   }
 

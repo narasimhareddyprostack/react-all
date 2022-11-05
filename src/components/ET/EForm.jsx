@@ -2,40 +2,38 @@ import React, { useState } from 'react';
 
 const EForm = ({ track, settrack }) => {
     const [TotalAMT, setTotalAMT] = useState(0);
-    const [InputValue, setInputValue] = useState(0);
-    // validation state
-    const tatal = parseInt(TotalAMT);
-    const Value = parseInt(InputValue);
+    const [InputValue, setInputValue] = useState(0);// validation state
+    const total = parseInt(TotalAMT);
+    const value = parseInt(InputValue);
     const date = new Date().toLocaleString();
-
     const updateHandler = (e) => {
         setInputValue(e.target.value)
     }
     const Addhandler = () => {
-        setTotalAMT(tatal + Value);
+        setTotalAMT(total + value);
         setInputValue('');
         settrack([...track,
         {
             tDate: date,
-            tTotal: tatal,
-            tAddedAmount: Value,
+            tTotal: total,
+            tAddedAmount: value,
             tRemovedAmount: '-',
-            tBalanceAmount: tatal + Value
+            tBalanceAmount: total + value
         }
         ]);
     }
 
     const Removehandler = () => {
-        setTotalAMT(tatal - Value);
+        setTotalAMT(total - value);
         setInputValue('');
 
         settrack([...track,
         {
             tDate: date,
-            tTotal: tatal,
+            tTotal: total,
             tAddedAmount: '-',
-            tRemovedAmount: Value,
-            tBalanceAmount: tatal - Value
+            tRemovedAmount: value,
+            tBalanceAmount: total - value
         }
         ]);
 

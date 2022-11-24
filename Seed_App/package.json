@@ -1,0 +1,28 @@
+{
+  "name": "movieapp",
+  "version": "1.0.0",
+  "description": "Node Js - Seed App with ES6, chalk, Morgan middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon start.js"
+  },
+  "keywords": [
+    "express",
+    "js",
+    "babel",
+    "chalk",
+    "morgan"
+  ],
+  "author": "Narasimha Reddy",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.11.5",
+    "babel-polyfill": "^6.26.0",
+    "chalk": "^4.1.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}

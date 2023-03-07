@@ -1,0 +1,186 @@
+{
+   "openapi":"3.0.0",
+   "info":{
+       "description":"This is the api for user",
+       "version":"__version__"
+   },
+   "tags":[
+       {
+           "name":"PUBLIC ROUTE",
+           "description":"PUBLIC ROUTE"
+       }
+   ],
+   "paths":{
+       "/health":{
+           "summary":"Testing Health check for app",
+           "get":{
+               "description":"Testing Health check for app",
+               "tags":["PUBLIC ROUTE"],
+               "responses":{
+                   "200":{
+                       "description":"Health Check pass"
+                   },
+                   "400":{
+                       "description":"Health Check fail"
+                   }
+               }
+           }
+       },
+       "/users":{
+           "summary":"Testing User",
+           "get":{
+               "description":"GET Users",
+               "tags":["PUBLIC ROUTE"],
+               "parameters":[
+                   {
+                       "in":"query",
+                       "name":"role",
+                       "schema":{
+                           "type":"string"
+                       },
+                       "description":"Choose role as admin or user"
+                   },
+                   {
+                        "in":"query",
+                        "name":"city",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description":"Enter User City"
+                    }
+               ],
+               "responses":{
+                    "200":{
+                        "description":"Health Check pass"
+                    },
+                    "400":{
+                        "description":"Health Check fail"
+                    }
+                }
+           }
+        },
+        "/user/{id}":{
+            "summary":"Testing User",
+            "get":{
+                "description":"GET Users",
+                "tags":["PUBLIC ROUTE"],
+                "parameters":[
+                    {
+                        "in":"path",
+                        "name":"id",
+                        "required":true,
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description":"Enter user object id"
+                    }
+                ],
+                "responses":{
+                     "200":{
+                         "description":"Health Check pass"
+                     },
+                     "400":{
+                         "description":"Health Check fail"
+                     }
+                 }
+            }
+        },
+        "/addUser":{
+            "summary":"Add New User",
+            "post":{
+                "description":"Adding New User",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "name":"Lavish",
+                                "city":"Venice",
+                                "phone":3534664646,
+                                "role":"User",
+                                "isActive":true
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                     "200":{
+                         "description":"Health Check pass"
+                     },
+                     "400":{
+                         "description":"Health Check fail"
+                     }
+                 }
+            }
+        },
+        "/updateUser":{
+            "summary":"Update User",
+            "put":{
+                "description":"Update User",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "_id":"",
+                                "name":"Lavish",
+                                "city":"Venice",
+                                "phone":3534664646,
+                                "role":"User",
+                                "isActive":true
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                     "200":{
+                         "description":"Health Check pass"
+                     },
+                     "400":{
+                         "description":"Health Check fail"
+                     }
+                 }
+            }
+        },
+        "/deleteUser":{
+            "summary":"Delete User",
+            "delete":{
+                "description":"Delete User",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":true,
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "_id":""
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                     "200":{
+                         "description":"Health Check pass"
+                     },
+                     "400":{
+                         "description":"Health Check fail"
+                     }
+                 }
+            }
+        }
+       
+   }
+}
